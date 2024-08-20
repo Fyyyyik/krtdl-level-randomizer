@@ -436,7 +436,7 @@ namespace KRtDL_Level_Randomizer
             Dictionary<string, List<string>> assets = new Dictionary<string, List<string>>();
 
             // First, load FDGPatching.txt into a single 53Kb string, what could go wrong
-            string path = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + @"\ext\FDGPatching.txt";
+            string path = Application.StartupPath + $@"{Path.DirectorySeparatorChar}ext{Path.DirectorySeparatorChar}FDGPatching.txt";
             if (File.Exists(path))
             {
                 AddOutputMessage("Patching FDG for scene " + fdgScene.Name);
