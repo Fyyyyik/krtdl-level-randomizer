@@ -42,7 +42,7 @@ namespace KRtDL_Level_Randomizer
         {
             0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
             10, 11, 12, 14, 15, 16, 17, 18,
-            19, 20, 26, 27, 28, 30, 31,
+            19, 20, 26, 27, 28, 31,
             32, 34, 35, 36, 37, 38, 39, 40,
             41, 42, 43, 44, 45, 46, 47, 48,
             49, 51, 52, 53, 54, 55, 56, 57,
@@ -872,21 +872,6 @@ namespace KRtDL_Level_Randomizer
 
                 case 27:
                     gimmick.Param3 = 1;
-                    break;
-
-                case 30:
-                    uint shutterDoorDir = (uint)rand.Next(3);
-                    uint shutterDoorSize = (uint)rand.Next(2);
-                    if (shutterDoorSize == 0)
-                    {
-                        uint shutterDoorSkin = (uint)rand.Next(3);
-                        param6 = $"000{shutterDoorDir}0{shutterDoorSize}0{shutterDoorSkin}";
-                    }
-                    else
-                    {
-                        param6 = $"000{shutterDoorDir}0{shutterDoorSize}00";
-                    }
-                    gimmick.Param6 = uint.Parse(param6, System.Globalization.NumberStyles.HexNumber);
                     break;
 
                 case 42:
